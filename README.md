@@ -62,7 +62,7 @@ To install the server software, issue the following commands:
 
 `$ cd /etc/wpable`
 
-`$ git clone git@github.com:lairdrt/wpable.git temp`
+`$ git clone git@github.com:samedayrules/wpable_server.git temp`
 
 `$ cp temp/server/* .`
 
