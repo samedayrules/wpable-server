@@ -38,7 +38,7 @@ if "$priv_ok"; then
         exit 1
     fi
     echo -n "Getting installation files..."
-    if git clone https://github.com/lairdrt/wpable.git temp > /dev/null 2>&1 ; then
+    if git clone git@github.com:samedayrules/wpable_server.git temp > /dev/null 2>&1 ; then
         echo "success"
     else
         echo "failed"
