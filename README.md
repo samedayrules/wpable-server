@@ -44,7 +44,7 @@ Installation of the server software involves logging into the Raspberry Pi, down
 
 Example installation (assuming you are logged into the Raspberry Pi with `root` (sudo) access):
 
-`$ wget https://github.com/samedayrules/wpable_server/blob/38264fd42501016d0e1413be6bfd76ff892cbf46/INSTALL.sh'
+`$ wget https://github.com/samedayrules/wpable_server/blob/38264fd42501016d0e1413be6bfd76ff892cbf46/INSTALL.sh`
 
 `$ ./INSTALL.sh linux`
 
