@@ -46,6 +46,8 @@ Example installation (assuming you are logged into the Raspberry Pi with `root` 
 
 `$ wget https://github.com/samedayrules/wpable_server/blob/38264fd42501016d0e1413be6bfd76ff892cbf46/INSTALL.sh`
 
+`$ chmod +x INSTALL.sh`
+
 `$ ./INSTALL.sh linux`
 
 Alternatively, you can manually enter the commands in the sections below to install and configure the sever software. You will need to change the default username `linux` to your targeted username within the server files `service-auth.pkla` and `wpable.conf`. This is done for you when you run the provided install script.
