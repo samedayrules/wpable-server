@@ -108,4 +108,4 @@ https://unix.stackexchange.com/questions/407967/polkit-rules-not-recognized-rasp
 
 ## Client Application
 
-Client document is located here: [WPA BLE Supplicant Client](https://github.com/samedayrules/wpable_client)
+Client documentation is located here: [WPA BLE Supplicant Client](https://github.com/samedayrules/wpable_client)
