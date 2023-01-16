@@ -62,11 +62,7 @@ To install the server software, issue the following commands:
 
 `$ cd /etc/wpable`
 
-`$ git clone git@github.com:samedayrules/wpable_server.git temp`
-
-`$ cp temp/server/* .`
-
-`$ rm -f -R temp`
+`$ git clone git@github.com:samedayrules/wpable_server.git .`
 
 `$ python -m venv venv`
 
