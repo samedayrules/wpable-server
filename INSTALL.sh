@@ -16,6 +16,13 @@ else
 fi
 if "$priv_ok"; then
     # Password will not be asked again due to caching.
+    echo -n "Installing required toolset..."
+    if sudo apt-get -y install supervisor git python3-venv python3-pip libglib2.0-dev libgirepository1.0-dev libcairo2-dev > /dev/null 2>&1 ; then
+        echo "success"
+    else
+        echo "failed"
+       exit 1
+    fi
     echo -n "Making installation directory..."
     if sudo mkdir -p /etc/wpable > /dev/null 2>&1 ; then
         echo "success"
