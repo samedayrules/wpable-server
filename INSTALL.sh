@@ -38,7 +38,21 @@ if "$priv_ok"; then
         exit 1
     fi
     echo -n "Getting installation files..."
-    if git clone git@github.com:samedayrules/wpable_server.git . > /dev/null 2>&1 ; then
+    if git clone git@github.com:samedayrules/wpable_server.git temp > /dev/null 2>&1 ; then
+        echo "success"
+    else
+        echo "failed"
+        exit 1
+    fi
+    echo -n "Copying files to final destination..."
+    if mv temp/* . > /dev/null 2>&1 ; then
+        echo "success"
+    else
+        echo "failed"
+        exit 1
+    fi
+    echo -n "Removing temporary files..."
+    if sudo rm -R temp > /dev/null 2>&1 ; then
         echo "success"
     else
         echo "failed"
