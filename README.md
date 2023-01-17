@@ -77,7 +77,11 @@ To install the server software, issue the following commands:
 
 `$ pip install -r requirements.txt`
 
+`$ sed -i "s/linux/$1/g" service-auth.pkla wpable.conf`
+
 `$ sudo cp wpable.conf /etc/supervisor/conf.d/wpable.conf`
+
+`$ sudo cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf`
 
 ### File System Permissions
 
