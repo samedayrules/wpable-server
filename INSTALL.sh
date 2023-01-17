@@ -93,6 +93,13 @@ if "$priv_ok"; then
         echo "failed"
         exit 1
     fi
+    echo -n "Creating wpa_supplicant template..."
+    if sudo cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null 2>&1 ; then
+        echo "success"
+    else
+        echo "failed"
+        exit 1
+    fi
     echo -n "Setting wpa_supplicant file permissions..."
     if sudo chown $1 /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null 2>&1 ; then
         echo "success"
