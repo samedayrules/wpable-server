@@ -117,7 +117,7 @@ https://unix.stackexchange.com/questions/650826/why-is-this-error-interactive-au
 
 https://unix.stackexchange.com/questions/407967/polkit-rules-not-recognized-raspbian-stretch
 
-## Reboot
+### Reboot
 
 The easiest way to start the server software is to reboot the Raspberry Pi once the installation completes.
 
