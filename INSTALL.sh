@@ -16,7 +16,7 @@ else
 fi
 if "$priv_ok"; then
     # Password will not be asked again due to caching.
-    echo -n "Installing required toolset..."
+    echo -n "Installing required toolset (this will take a few minutes)..."
     if sudo apt-get -y install supervisor git python3-venv python3-pip libglib2.0-dev libgirepository1.0-dev libcairo2-dev > /dev/null 2>&1 ; then
         echo "success"
     else
