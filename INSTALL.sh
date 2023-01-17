@@ -79,7 +79,7 @@ if "$priv_ok"; then
         echo "failed"
         exit 1
     fi
-    echo -n "Installing python packages..."
+    echo -n "Installing python packages (this will also take a few minutes)..."
     if pip install -r requirements.txt > /dev/null 2>&1 ; then
         echo "success"
     else
