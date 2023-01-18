@@ -52,8 +52,7 @@ Example installation (assuming you are logged into the Raspberry Pi with `root` 
 
 `$ ./INSTALL.sh linux`
 
-Alternatively, you can manually enter the commands in the sections below to install and configure the sever software. You will need to change the default username `linux` to your targeted u
-sername within the server files `service-auth.pkla` and `wpable.conf`. This is done for you when you run the provided install script.
+Alternatively, you can manually enter the commands in the sections below to install and configure the sever software. You will need to change the default username `linux` to your targeted username within the server files `service-auth.pkla` and `wpable.conf`. This is done for you when you run the provided install script.
 
 The file `INSTALL.sh` executes the commands given in the **Installation**, **File System Permissions**, and **User Authentication** sections.
 
