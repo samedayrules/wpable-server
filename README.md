@@ -44,7 +44,7 @@ The installation instructions assume that you are targeting a newly imaged Raspb
 
 Installation of the server software involves logging into the Raspberry Pi, downloading the install script, and then running the script. When you execute the install script, provide the username under which the server software is to be installed as a command line argument (e.g., `./INSTALL.sh linux`). Also, you must have `root` access in order to install the server software.
 
-First update the OS (because we're assuming a newly imaged system):
+First update the OS (assuming a newly imaged system):
 
 `$ sudo apt -y update`
 
