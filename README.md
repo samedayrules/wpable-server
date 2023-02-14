@@ -50,7 +50,7 @@ First update the OS (because we're assuming a newly imaged system):
 
 `$ sudo apt -y upgrade`
 
-Example installation (assuming you are logged into the Raspberry Pi with `root` (sudo) access):
+Then install using the script (assuming you are logged into the Raspberry Pi with `root` access):
 
 `$ wget https://github.com/samedayrules/wpable_server/raw/main/INSTALL.sh`
 
