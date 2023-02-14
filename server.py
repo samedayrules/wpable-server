@@ -553,7 +553,7 @@ class DhcpMonitor():
         if self.__state == 'IDLE':
             self.__state = 'RESTART'
             self.__start_time = time.time()
-            self.__process = subprocess.Popen(['/usr/bin/systemctl', 'restart', 'dhcpcd'])
+            self.__process = subprocess.Popen(['systemctl', 'restart', 'dhcpcd'])
 
 
 class WlanManageS1Service(Service):
