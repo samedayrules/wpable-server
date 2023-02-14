@@ -46,9 +46,9 @@ Installation of the server software involves logging into the Raspberry Pi, down
 
 First update the OS (because we're assuming a newly imaged system):
 
-`$ sudo apt update`
+`$ sudo apt -y update`
 
-`$ sudo apt upgrade`
+`$ sudo apt -y upgrade`
 
 Example installation (assuming you are logged into the Raspberry Pi with `root` (sudo) access):
 
