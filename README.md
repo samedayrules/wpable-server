@@ -66,7 +66,7 @@ Under Linux, the server software is installed in: `\etc\wpable`
 
 To install the server software, issue the following commands:
 
-`$ sudo apt-get -y install supervisor git python3-venv python3-pip libglib2.0-dev libgirepository1.0-dev libcairo2-dev`
+`$ sudo apt -y install supervisor git python3-venv python3-pip libglib2.0-dev libgirepository1.0-dev libcairo2-dev`
 
 `$ sudo mkdir -p /etc/wpable`
 
