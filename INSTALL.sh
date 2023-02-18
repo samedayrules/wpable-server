@@ -66,7 +66,7 @@ if "$priv_ok"; then
         exit 1
     fi
     echo -n "Making python virtual environment..."
-    if python -m venv venv > /dev/null 2>&1 ; then
+    if python3 -m venv venv > /dev/null 2>&1 ; then
         echo "success"
     else
         echo "failed"
