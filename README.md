@@ -42,15 +42,17 @@ The following sections assume the use of the fictitious `linux` username - custo
 
 The installation instructions assume that you are targeting a newly imaged Raspberry Pi with the **Raspberry Pi OS Lite (32-bit)** operating system image, which is a fairly bare-bones image. The installation srcipt will download and install all the utility programs (e.g., `git`, `supervisor`, etc.) needed to run the server application.
 
+The server software has been successfully installed and tested on the Raspberry Pi Zero W, Raspberry Pi Zero 2 W, and the Raspberry Pi 3 Model B+ using the Raspbian GNU/Linux 11 (bullseye) OS.
+
 Installation of the server software involves logging into the Raspberry Pi, downloading the install script, and then running the script. When you execute the install script, provide the username under which the server software is to be installed as a command line argument (e.g., `./INSTALL.sh linux`). Also, you must have `root` access in order to install the server software.
 
-First update the OS (assuming a newly imaged system):
+First, update the OS (assuming a newly imaged system):
 
 `$ sudo apt -y update`
 
 `$ sudo apt -y upgrade`
 
-Then install using the script (assuming you are logged into the Raspberry Pi with `root` access):
+Second, install using the script (assuming you are logged into the Raspberry Pi with `root` access):
 
 `$ wget https://github.com/samedayrules/wpable_server/raw/main/INSTALL.sh`
 
