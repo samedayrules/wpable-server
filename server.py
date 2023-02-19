@@ -114,7 +114,6 @@ class Application(dbus.service.Object):
                 descs = chrc.get_descriptors()
                 for desc in descs:
                     response[desc.get_path()] = desc.get_properties()
-
         return response
 
 
@@ -162,7 +161,6 @@ class Service(dbus.service.Object):
     def GetAll(self, interface):
         if interface != GATT_SERVICE_IFACE:
             raise InvalidArgsException()
-
         return self.get_properties()[GATT_SERVICE_IFACE]
 
 
@@ -696,7 +694,6 @@ def find_adapter(bus):
     for o, props in objects.items():
         if GATT_MANAGER_IFACE in props.keys():
             return o
-
     return None
 
 
