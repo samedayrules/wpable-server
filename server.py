@@ -731,7 +731,7 @@ def main():
     agent = Agent(bus, AGENT_PATH)
 
     app = Application(bus)
-    app.add_service(WlanManageS1Service(bus, 0))
+    app.add_service(WlanManageS1Service(bus, 2))
 
     agent_manager = dbus.Interface(bluez_obj, "org.bluez.AgentManager1")
     agent_manager.RegisterAgent(AGENT_PATH, "NoInputNoOutput")
