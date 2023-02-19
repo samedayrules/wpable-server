@@ -158,9 +158,7 @@ class Service(dbus.service.Object):
     def get_characteristics(self):
         return self.characteristics
 
-    @dbus.service.method(DBUS_PROP_IFACE,
-                         in_signature='s',
-                         out_signature='a{sv}')
+    @dbus.service.method(DBUS_PROP_IFACE, in_signature='s', out_signature='a{sv}')
     def GetAll(self, interface):
         if interface != GATT_SERVICE_IFACE:
             raise InvalidArgsException()
@@ -208,18 +206,14 @@ class Characteristic(dbus.service.Object):
     def get_descriptors(self):
         return self.descriptors
 
-    @dbus.service.method(DBUS_PROP_IFACE,
-                         in_signature='s',
-                         out_signature='a{sv}')
+    @dbus.service.method(DBUS_PROP_IFACE, in_signature='s', out_signature='a{sv}')
     def GetAll(self, interface):
         if interface != GATT_CHRC_IFACE:
             raise InvalidArgsException()
 
         return self.get_properties()[GATT_CHRC_IFACE]
 
-    @dbus.service.method(GATT_CHRC_IFACE,
-                        in_signature='a{sv}',
-                        out_signature='ay')
+    @dbus.service.method(GATT_CHRC_IFACE, in_signature='a{sv}', out_signature='ay')
     def ReadValue(self, options):
         logger.error('Default ReadValue called, returning error')
         raise NotSupportedException()
@@ -239,8 +233,7 @@ class Characteristic(dbus.service.Object):
         logger.error('Default StopNotify called, returning error')
         raise NotSupportedException()
 
-    @dbus.service.signal(DBUS_PROP_IFACE,
-                         signature='sa{sv}as')
+    @dbus.service.signal(DBUS_PROP_IFACE, signature='sa{sv}as')
     def PropertiesChanged(self, interface, changed, invalidated):
         pass
 
@@ -269,18 +262,13 @@ class Descriptor(dbus.service.Object):
     def get_path(self):
         return dbus.ObjectPath(self.path)
 
-    @dbus.service.method(DBUS_PROP_IFACE,
-                         in_signature='s',
-                         out_signature='a{sv}')
+    @dbus.service.method(DBUS_PROP_IFACE, in_signature='s', out_signature='a{sv}')
     def GetAll(self, interface):
         if interface != GATT_DESC_IFACE:
             raise InvalidArgsException()
-
         return self.get_properties()[GATT_DESC_IFACE]
 
-    @dbus.service.method(GATT_DESC_IFACE,
-                        in_signature='a{sv}',
-                        out_signature='ay')
+    @dbus.service.method(GATT_DESC_IFACE, in_signature='a{sv}', out_signature='ay')
     def ReadValue(self, options):
         logger.error('Default ReadValue called, returning error')
         raise NotSupportedException()
@@ -365,9 +353,7 @@ class Advertisement(dbus.service.Object):
             self.data = dbus.Dictionary({}, signature='yv')
         self.data[ad_type] = dbus.Array(data, signature='y')
 
-    @dbus.service.method(DBUS_PROP_IFACE,
-                         in_signature='s',
-                         out_signature='a{sv}')
+    @dbus.service.method(DBUS_PROP_IFACE, in_signature='s', out_signature='a{sv}')
     def GetAll(self, interface):
         logger.info('GetAll')
         if interface != LE_ADVERTISEMENT_IFACE:
@@ -375,9 +361,7 @@ class Advertisement(dbus.service.Object):
         logger.info('Returning props')
         return self.get_properties()[LE_ADVERTISEMENT_IFACE]
 
-    @dbus.service.method(LE_ADVERTISEMENT_IFACE,
-                         in_signature='',
-                         out_signature='')
+    @dbus.service.method(LE_ADVERTISEMENT_IFACE, in_signature='', out_signature='')
     def Release(self):
         logger.info('%s: Released!' % self.path)
 
@@ -471,7 +455,7 @@ class CharacteristicUserDescriptionDescriptor(Descriptor):
 
 
 class Rejected(dbus.DBusException):
-	_dbus_error_name = "org.bluez.Error.Rejected"
+    _dbus_error_name = "org.bluez.Error.Rejected"
 
 
 # https://wiki.archlinux.org/title/wpa_supplicant
@@ -693,15 +677,15 @@ def register_ad_error_cb(error):
 
 
 def ask(prompt):
-	try:
-		return raw_input(prompt)
-	except:
-		return input(prompt)
+    try:
+        return raw_input(prompt)
+    except:
+        return input(prompt)
 
 
 def dev_connect(path):
-	dev = dbus.Interface(bus.get_object("org.bluez", path),	"org.bluez.Device1")
-	dev.Connect()
+    dev = dbus.Interface(bus.get_object("org.bluez", path), "org.bluez.Device1")
+    dev.Connect()
 
 
 def find_adapter(bus):
@@ -717,9 +701,8 @@ def find_adapter(bus):
 
 
 def set_trusted(path):
-	props = dbus.Interface(bus.get_object("org.bluez", path),
-					"org.freedesktop.DBus.Properties")
-	props.Set("org.bluez.Device1", "Trusted", True)
+    props = dbus.Interface(bus.get_object("org.bluez", path), "org.freedesktop.DBus.Properties")
+    props.Set("org.bluez.Device1", "Trusted", True)
 
 
 def main():
